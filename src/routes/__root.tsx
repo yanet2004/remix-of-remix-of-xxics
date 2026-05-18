@@ -121,6 +121,18 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" />
+        <script src="https://files.bpcontent.cloud/2026/05/18/07/20260518070422-B73JZVFY.js" defer />
+        {/* Position Botpress chat button on the left so it doesn't overlap scroll-to-top */}
+        <style>{`
+          #bp-web-widget-container,
+          .bpw-floating-button,
+          [class*="bpw-widget-btn"],
+          [id*="bp-web-widget"] {
+            left: 1.5rem !important;
+            right: auto !important;
+          }
+        `}</style>
       </body>
     </html>
   );

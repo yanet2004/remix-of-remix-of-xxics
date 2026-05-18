@@ -5,6 +5,7 @@ import aiAssistant from "@/assets/lucy.png";
 import { Reveal } from "@/components/Reveal";
 import { PricingInteraction } from "@/components/ui/pricing-interaction";
 import { TestimonialsColumn, type Testimonial } from "@/components/ui/testimonials-columns-1";
+import { VideoPlayer } from "@/components/ui/video-player";
 import { motion } from "motion/react";
 
 export const Route = createFileRoute("/")({
@@ -189,6 +190,16 @@ function HomePage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* VIDEO */}
+      <section className="container-x py-20 md:py-28">
+        <Reveal>
+          <VideoPlayer
+            youtubeId="jSqvKSxLngg"
+            className="aspect-video w-full"
+          />
+        </Reveal>
       </section>
 
       {/* AI PREVIEW */}
